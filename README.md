@@ -1,38 +1,32 @@
 # Shopping List App
 
-A simple, intuitive Flutter application for managing your grocery shopping list. The app allows users to add items to their grocery list, categorize them, and keep track of quantities.
+A simple and interactive shopping list application built with Flutter, designed to help you manage your grocery items effectively.
 
 ## Features
 
-- **Add Grocery Items:** Add new items to your shopping list with name, category, and quantity.
-- **Categorization:** Items are categorized into predefined categories like Vegetables, Fruits, Meat, Dairy, and more.
-- **Dark Theme:** The app comes with a sleek dark theme for a better user experience.
-- **Validation:** Ensures that the item name and quantity are valid before adding them to the list.
+- **Add Items**: Add grocery items by entering the name, quantity, and selecting a category.
+- **Remove Items**: Swipe to remove items from your shopping list.
+- **Persistent Storage**: The app fetches and stores data in a Firebase Realtime Database, ensuring your list is saved even after closing the app.
+- **Dark Theme**: The app uses a modern dark theme to reduce eye strain and save battery life on OLED screens.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Flutter SDK
-- Dart SDK
+Ensure you have the following installed on your local development environment:
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart](https://dart.dev/get-dart)
+- [Firebase Account](https://firebase.google.com/)
 
 ### Installation
 
 1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/Jalo1982/shopping_list.git
-    cd shopping_list
-    ```
 
-2. **Install dependencies:**
-    ```bash
-    flutter pub get
-    ```
+   ```sh
+   git clone https://github.com/Jalo1982/shopping_list_app.git
+   cd shopping_list_app
 
-3. **Run the app:**
-    ```bash
-    flutter run
-    ```
 
 ### Folder Structure
 
@@ -57,7 +51,7 @@ lib/
 ### Code Overview
 
 - **`main.dart`:** Initializes the application and sets up the theme.
-- **`grocery_list.dart`:** Displays the list of grocery items and handles adding new items.
+- **`grocery_list.dart`:** A stateful widget that manages the list of grocery items. It fetches data from Firebase and allows the addition or removal of items.
 - **`new_item.dart`:** Form for adding a new grocery item with validation.
 - **`category.dart`:** Enum and model representing the different categories available.
 - **`grocery_item.dart`:** Model representing an individual grocery item.
